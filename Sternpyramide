@@ -1,0 +1,56 @@
+package ws13.uebungen.uebung5;
+
+
+// Author: T.C.
+// Date: 21.11.2013
+
+
+public class FuenfteUebung {
+	
+	public static void pyramide(int zeilen)
+	{
+		int leerzeichen = zeilen-1;
+		
+		/* diese for Schleife generiert die Zeilenanzahl,
+		 * die mit dem Aufruf der Methode pyramide(zeilen) 
+		 * in der main() Methode uebergeben wurde
+		 */
+		for (int i = 0; i<zeilen; i++)
+		{
+			
+			/* diese for Schleife generiert die Leerzeichen,
+			 * die pro Zeile vor dem ersten Stern stehen sollen,
+			 * um die Pyramide entsprechend einzuruecken 
+			 */
+			for (int k=0; k<leerzeichen; k++)
+			{
+				System.out.print(" ");
+			} 
+			
+			
+			// diese for Schleife generiert die Sterne
+			for (int j=0; j<i*2-1; j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+			
+			
+			/* von jedem generierten Leerzeichen wird
+			 * pro Durchlauf ein Leerzeichen abgezogen
+			 * und damit die Anzahl der Leerzeichen pro
+			 * Zeile um 1 verringert.
+			 */
+			leerzeichen--;
+		}
+	}
+	public static void main(String[] args) {
+		
+		/* durch die Aenderung des Parameters
+		 * der Methode pyramide(parameter), 
+		 * kann die Hoehe der Pyramide 
+		 * bestimmt werden
+		 */
+		pyramide(11);
+	}
+}
